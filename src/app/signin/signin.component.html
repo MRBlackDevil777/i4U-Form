@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <div class="container">
+        <div id="register">
+            <header><h1>Sign-in</h1></header>
+        </div>
+        
+        <form class="signup" [formGroup]='signinForm'(ngSubmit)="OnCreate(signinForm.value)">
+        
+            
+            <label>EmailID:</label>
+            <input type="text" name="EmailID" placeholder="EmailID" formControlName="EmailID"><br>
+            <p *ngIf="IsClicked && t['EmailID'].errors"><strong>EmailID is invalid</strong></p>
+            
+            <label>Password:</label>
+            <input type="password" name="Password" placeholder="Password" formControlName="Password"><br>
+            <p *ngIf="IsClicked && t['Password'].errors"><strong>Password is invalid</strong></p>
+
+            <div id="signin">
+                <button id="login">Sign-in</button>
+                <p *ngIf="IsSaved" style="color: crimson;">{{Message}} </p></div>
+            
+        </form>        
+    
+        <footer><b><h2><a href routerLink="/Signup">Don't have an account?<u>Signup</u></a></h2></b></footer>
+    
+    </div>>
+    </body>
+    </html>

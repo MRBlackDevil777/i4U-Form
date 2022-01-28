@@ -1,0 +1,110 @@
+<p>interviewforyou works!</p>
+<html>
+    <body>
+        
+        <div id="register">
+             <header><h1>i4U Application</h1></header>
+        </div>
+
+<form class="signup" [formGroup]='i4UForm'(ngSubmit)="OnCreate(i4UForm.value)">
+
+    <label for="Name">Name:</label>
+    <input type="text" name="Name" placeholder="Name" formControlName="Name"><br>
+  
+    <p *ngIf="IsClicked && u['Name'].errors"><strong>Name is invalid</strong></p>
+
+    <label for="Age">Age:</label>
+    <input type="number" name="Age" placeholder="Age" formControlName="Age"><br>
+   
+    <p *ngIf="IsClicked && u['Age'].errors"><strong>Age is reqired</strong></p>
+    
+    <label for="Qualification">Qualification:</label>
+        <select name="Qualification" formControlName="Qualification">
+          <option value=""disabled selected hidden>Choose the qualification..</option>
+          <option value="SSLC">SSLC</option>
+          <option value="HSC">HSC</option>
+          <option value="U.G">U.G</option>
+          <option value="P.G">P.G</option>
+          <option value="Others">Others</option>
+          
+        </select><br>
+        <textarea placeholder="Select Others and type your qualification here..." formControlName="Others"></textarea><br>
+        
+        <p *ngIf="IsClicked && u['Qualification'].errors"><strong>Qualification is not selected</strong></p>
+        
+        <label for="Areaofinterest">Area of interest:</label>
+        <select name="Areaofinterest" id="Areaofinterest" formControlName="Areaofinterest">
+          <option value=""disabled selected hidden>Choose a field..</option>
+          <option value="Analyticsmanager">Analytics manager</option>
+          <option value="Bigdataengineer">Big data engineer</option>
+          <option value="CloudEngineer">CloudEngineer</option>
+          <option value="Cloudcomputingspecialist">Cloud computing specialist</option>
+          <option value="ComputerSupportSpecialist">Computer Support Specialist</option>
+          <option value="CyberSecurityAnalyst">Cyber Security Analyst</option>
+          <option value="Dataanalyst">Data analyst</option>
+          <option value="Datascientist">Data scientist</option>
+          <option value="Databaseadministrator">Database administrator</option>
+          <option value="DevOpsengineer">DevOps engineer</option>
+          <option value="Developmentoperationengineer">Developmentoperationengineer</option>
+          <option value="DirectorofIT">Director of IT</option>
+          <option value="DotNetdeveloper">DotNet developer</option>
+          <option value="Frontendengineer">Front end engineer</option>
+          <option value="Fullstackdeveloper">Full stack developer</option>
+          <option value="Gamedeveloper">Game developer</option>
+          <option value="Hardwareengineer">Hardware engineer</option>
+          <option value="Helpdeskanalyst">Help desk analyst</option>
+          <option value="Helpdesktechnician">Help desk technician</option>
+          <option value="ITcoordinator">IT coordinator</option>
+          <option value="ITleadership">IT leadership</option>
+          <option value="ITsecurityspecialist">IT security specialist</option>
+          <option value="ITtechnician">IT technician</option>
+          <option value="Javadeveloper">Java developer</option>
+          <option value="Networkadministrator">Network administrator</option>
+          <option value="Networkengineer">Network Engineer</option>
+          <option value="Networktechnician">Network technician</option>
+          <option value="PCtechnician">PC technician</option>
+          <option value="Seniorsoftwareengineer">Senior software engineer</option>
+          <option value="Softwareapplicationpackager">Software application packager</option>
+          <option value="Systemanalyst">System analyst</option>
+          <option value="Systemadministrator">System administrator</option>
+          <option value="Userexperiencedesigner">User experience designer</option>
+          <option value="Webdeveloper">Web developer</option>
+          <option value="Webadministrator">Web administrator</option>
+        
+        </select><br>
+      
+      <p *ngIf="IsClicked && u['Areaofinterest'].errors"><strong>Area of interest is not selected</strong></p>
+      
+    
+        <label for="Place">Place:</label>
+        <select name="Place" id="Place" formControlName="Place">
+          <option value=""disabled selected hidden>Choose a place to work..</option>
+          <option value="Ahmedbad">Ahmedbad</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Coimbatore">Coimbatore</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Mysore">Mysore</option>
+          <option value="Pune">Pune</option>
+          <option value="Trivandrum">Trivandrum</option>
+          <option value="Visakhapatnam">Visakhapatnam</option>
+        </select><br>
+        <p *ngIf="IsClicked && u['Place'].errors"><strong>Place is not selected</strong></p><br>
+
+        <label>Skills:</label>
+      <textarea placeholder="Enter your Skills.." formControlName="Skills"></textarea><br>
+        <p *ngIf="IsClicked && u['Skills'].errors"><strong>Enter your Skills</strong></p>
+
+        
+        <p><i><b><a href routerLink="/Termsandconditions">Terms & conditions</a></b></i></p><br>
+            
+        <button>Apply</button>
+        <p *ngIf="IsSaved" style="color: crimson;">{{Message}} </p><br>
+
+      </form>
+    
+    </body>    
+</html>

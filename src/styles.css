@@ -1,0 +1,12 @@
+
+body
+{
+  background-image: url("https://scontent.fmaa2-2.fna.fbcdn.net/v/t39.30808-6/271715226_1843280399393046_2513573502693100800_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=730e14&_nc_ohc=aCArk_fG18MAX9xsdjn&_nc_ht=scontent.fmaa2-2.fna&oh=00_AT8VyqlKF1orOzgQvcZrI58c4BUcysIjSbyay7y9Lfpcqg&oe=61E874F3");
+
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

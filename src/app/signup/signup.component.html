@@ -1,0 +1,61 @@
+<html>
+    <body>
+        
+        <div id="register">
+             <header><h1>Create an account</h1></header>
+        </div>
+
+<form class="signup" [formGroup]='signupForm'(ngSubmit)="OnCreate(signupForm.value)"><br>
+
+    <label for="FirstName">FirstName:</label>
+    <input type="text" name="FirstName" placeholder="FirstName" formControlName="FirstName"><br>
+    <p *ngIf="IsClicked && s['FirstName'].errors"><strong>FirstName is invalid</strong></p>
+
+    <label for="Lastame">Lastname:</label>
+    <input type="text" name="LastName" placeholder="LastName" formControlName="LastName"><br>
+    <p *ngIf="IsClicked && s['LastName'].errors"><strong>LastName is invalid</strong></p>
+    
+    <label for="Gender">Gender:</label>
+    <select name="Gender" formControlName="Gender">
+        <option value=""disabled selected hidden>Choose a field..</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br>
+        
+        <p *ngIf="IsClicked && s['Gender'].errors"><strong>Gender is not selected</strong></p>
+        
+        
+        <label>Date of birth:</label>
+        <input type="date" name="Dateofbirth" placeholder="Dateofbirth" formControlName="Dateofbirth"><br>
+        <p *ngIf="IsClicked && s['Dateofbirth'].errors"><strong>Dateofbirth is invalid</strong></p>
+        
+        <label>MobileNo:</label>
+        <input type="number" name="MobileNo" placeholder="MobileNo" formControlName="MobileNo"><br>
+        <p *ngIf="IsClicked && s['MobileNo'].errors"><strong>MobileNo is invalid</strong></p>
+
+    <label>EmailID:</label>
+    <input type="text" name="EmailID" placeholder="EmailID" formControlName="EmailID"><br>
+    <p *ngIf="IsClicked && s['EmailID'].errors"><strong>EmailID is invalid</strong></p>
+
+    <label>Password:</label>
+    <input type="password" name="Password" placeholder="Password" formControlName="Password"(keyup)="PasswordCheck(signupForm.value)"><br>
+    <p *ngIf="IsClicked && s['Password'].errors"><strong>Password is invalid</strong></p>
+
+    <label>ReTypePassword:</label>
+    <input type="password" name="ReTypePassword" placeholder="ReTypePassword" formControlName="ReTypePassword"(keyup)="PasswordCheck(signupForm.value)"><br>
+    <p *ngIf="IsClicked && s['ReTypePassword'].errors"><strong>Password doesn't match</strong></p>
+
+    <p *ngIf="PasswordNotMatch"><strong>ReTypePassword doesn't match</strong></p><br>
+
+    <p><i><b routerLink="/Termsandconditions">By Signing Up, you agree to our Terms & conditions.</b></i></p><br>
+
+    <button>Sign-up</button>
+    <p *ngIf="IsSaved" style="color: crimson;">{{Message}} </p>
+
+</form>
+
+<footer><b><h2><a href routerLink="/Signin">Already have an account?<u>Sign-in</u></a></h2></b></footer>
+
+</body>
+</html>

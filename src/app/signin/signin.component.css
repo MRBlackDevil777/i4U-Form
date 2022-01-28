@@ -1,0 +1,70 @@
+.register
+{
+border-radius:5px;
+background-color:beige;
+width:350px;
+margin-left:495px;
+margin-right:495px;
+text-align: center;
+}
+
+header
+{
+color:blue;
+font-size:20px;
+cursor:default;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container
+{
+    width: 550px;
+    background-color:rgba(255, 42, 42, 0.250);
+    border-radius: 15px;
+    border: 1px solid black;
+    
+}
+
+.container:hover
+{
+    box-shadow: rgba(255, 42, 42, 0.5) 5px 30px 60px -50px,
+    rgba(255, 42, 42, 0.5) 0px 30px 60px -30px,
+    rgba(0, 0, 8, 0.3) 0px -1px 10px 0px inset;
+}
+
+button:hover 
+{
+ background:blue;
+ font-size: 30px;
+}   
+
+button
+{
+font-size:25px;
+color: white;
+background-color:steelblue;
+width:140px;
+height:50px;
+padding:5px;
+border-radius:20px;
+cursor:pointer;
+}
+
+#signin
+{
+    margin-top: 15px;
+    text-align: center;
+} 
+
+footer
+{
+margin-bottom:40px;
+text-align: center;
+margin-top: 10px;
+}

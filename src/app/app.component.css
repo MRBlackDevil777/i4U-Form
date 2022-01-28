@@ -1,0 +1,76 @@
+nav
+{
+    position: relative;
+    margin: auto;
+    font-size: 0;
+    text-align: center;
+    display: inline-block;
+    height: 50px;
+    background-color: black;
+    width: 1350px;
+}
+
+nav a
+{
+    float: left;
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: white;
+    list-style: none;
+    z-index: 1;
+    line-height: 50px;
+    text-decoration: none;
+    border-right: 2px solid white;
+}
+
+nav .animation
+{
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    z-index: 0;
+    background-color: rgb(247, 49, 171);
+    border-radius: 7px;
+    transition: all .5s ease 0s;
+}
+a:nth-child(1)
+{
+    width: 100px;
+}
+
+nav .start-home, a:nth-child(1):hover~.animation
+{
+    width: 100px;
+    left: 0px;
+}
+
+a:nth-child(2)
+{
+    width: 110px;
+}
+
+nav .start-About, a:nth-child(2):hover~.animation
+{
+    width: 110px;
+    left: 105px;
+}
+
+
+a:nth-child(3)
+{
+    width: 120px;
+}
+
+nav .start-i4U Form, a:nth-child(3):hover~.animation
+{
+    width: 120px;
+    left: 215px;
+}
+
+
+#component
+{
+    float: left;
+    margin-left: 400px;
+}
